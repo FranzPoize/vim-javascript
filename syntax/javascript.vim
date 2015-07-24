@@ -128,6 +128,8 @@ syntax keyword jsConditional    if else switch
 syntax keyword jsRepeat         do while for
 syntax keyword jsLabel          case default
 syntax keyword jsKeyword        yield
+syntax keyword jsAsync          async
+syntax keyword jsAwait          await
 syntax keyword jsClass          extends class
 syntax keyword jsException      try catch throw finally
 
@@ -265,6 +267,8 @@ if version >= 508 || !exists("did_javascript_syn_inits")
   HiLink jsStatement            Statement
   HiLink jsException            Exception
   HiLink jsKeyword              Keyword
+  HiLink jsAsync                Keyword
+  HiLink jsAwait                Keyword
   HiLink jsArrowFunction        Type
   HiLink jsFunction             Type
   HiLink jsGenerator            jsFunction
@@ -301,8 +305,8 @@ if version >= 508 || !exists("did_javascript_syn_inits")
   HiLink jsExceptions           Special
   HiLink jsFutureKeys           Special
   HiLink jsBuiltins             Special
-  HiLink jsModules              Include
-  HiLink jsModuleWords          Include
+  HiLink jsModules              PreProc
+  HiLink jsModuleWords          PreProc
 
   HiLink jsDomErrNo             Constant
   HiLink jsDomNodeConsts        Constant
